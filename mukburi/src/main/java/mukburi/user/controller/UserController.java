@@ -1,4 +1,4 @@
-package user.controller;
+package mukburi.user.controller;
 
 import java.util.Map;
 
@@ -19,9 +19,8 @@ public class UserController {
 	//private UserService userService;
 	
 	@RequestMapping(value="/user/user_Join.do")
-	public ModelAndView openUserJoin (CommandMap commandMap)throws Exception{		
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("/user/user_Join");
+	public ModelAndView openUserJoin ()throws Exception{		
+		ModelAndView mv = new ModelAndView("/user/user_Join");	
 		return mv;
 	
 	}
