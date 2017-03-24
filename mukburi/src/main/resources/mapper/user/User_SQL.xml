@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user">
+		<insert id="userJoin" parameterType="hashmap">
+		<![CDATA[
+		INSERT INTO TB_USER
+		(
+		user_id, 
+		user_nickname, 
+		user_name, 
+		user_pwd, 
+		user_hp
+		)
+		VALUES
+		(
+		#{user_id}, 
+		#{user_nickname}, 
+		#{user_name},  
+		#{user_pwd}, 
+		#{user_hp}
+		)
+		]]>
+		</insert>
+
+
+
+</mapper>
