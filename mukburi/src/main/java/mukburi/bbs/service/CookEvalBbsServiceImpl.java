@@ -9,6 +9,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -20,9 +21,14 @@ public class CookEvalBbsServiceImpl implements CookEvalBbsService {
 	@Resource(name="cookEvalBbsDAO")
 	private CookEvalBbsDAO  cookEvalBbsDAO;
 	
-	private static final String FILE_URL = "D:/upload_img";
+/*	@Value("#{props['muckburi.bbs.img_path']}")
+	private String bbs_img_ROOT;
+	*/
+	
+	
+	private static final String FILE_URL = "E:/upload_img";
 
-	private static final String SAVE_URL = "D:/upload_img";
+	private static final String SAVE_URL = "E:/upload_img";
 	
 	
 	

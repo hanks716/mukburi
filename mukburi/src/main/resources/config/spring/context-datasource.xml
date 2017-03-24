@@ -4,15 +4,23 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
                         http://www.springframework.org/schema/jdbc  http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
      
-
-     <bean id="dataSourceSpied" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+    <bean id="dataSourceSpied" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://hanks.iptime.org:3306/mukburi"/>
+        <property name="username" value="hanks"/>
+        <property name="password" value="hks@590405"/>
+    </bean>
+    
+    
+<!--      <bean id="dataSourceSpied" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="#{props['muckburi.jdbc.driverClassName']}"/>
         <property name="url" value="#{props['muckburi.jdbc.url']}"/>
         <property name="username" value="#{props['muckburi.jdbc.username']}"/>
         <property name="password" value="#{props['muckburi.jdbc.password']}"/>
-             <!-- connection이 살아 있는지 확인 -->
+             connection이 살아 있는지 확인
 		<property name="validationQuery" value="select 1" />
     </bean>
+     -->
     
     <bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
         <constructor-arg ref="dataSourceSpied" />
