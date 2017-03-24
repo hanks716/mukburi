@@ -14,7 +14,8 @@
 </form>
 
  <script type="text/javascript">
-              
+
+	
                 CKEDITOR.replace( 'cook_bbs_contents',{
                 	filebrowserUploadUrl: '${pageContext.request.contextPath}/cookEvalBBs/contentsUpload.do'
 

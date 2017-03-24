@@ -11,6 +11,7 @@
 
  <a href="#this" class="btn" id="list">게시판 리스트</a>
  <a href="#this" class="btn" id="join">회원가입 폼</a>
+  <a href="#this" class="btn" id="cook_eval_wirte">음식평가게시판글쓰기</a>
  
  
  
@@ -28,7 +29,14 @@
             });
         });
          
-         
+        $("#cook_eval_wirte").on("click",function(e){
+        	  var comSubmit = new ComSubmit();
+              comSubmit.setUrl("<c:url value='/cookEvalBBs/cookEvalWrite.do' />");
+              comSubmit.submit();
+        });
+   
+        
+        
         function fn_openBoardList(){
             var comSubmit = new ComSubmit();
             comSubmit.setUrl("<c:url value='/bbs/openBoardList.do' />");
@@ -40,6 +48,8 @@
             comSubmit.setUrl("<c:url value='/user/user_Join.do' />");
             comSubmit.submit();
         }
+        
+        
     </script>
 </body>
 </html>
