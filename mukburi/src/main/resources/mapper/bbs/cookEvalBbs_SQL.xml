@@ -3,7 +3,25 @@
 
 <mapper  namespace="cookEvalBBs">
 
-
+	<insert id="insertCookEvalBbs" parameterType="hashmap">
+		<![CDATA[
+		INSERT INTO cook_eval_bbs
+		(
+		co_eval_title, 
+		co_eval_contents, 
+		co_crate_date, 
+		co_eval_score
+		
+		)
+		VALUES
+		(
+		#{TITLE}, 
+		#{CONTENTS}, 
+		NOW(), 
+		'hanks'
+		)
+		]]>
+		</insert>
 
 
 
