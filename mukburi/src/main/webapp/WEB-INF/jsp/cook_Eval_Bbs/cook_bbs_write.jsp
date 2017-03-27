@@ -11,6 +11,7 @@
  <form action="#">
 제목: <input type="text" id="cook_bbs_title" name="cook_bbs_title">
 내용: <textarea rows="10" cols="40" id="cook_bbs_contents" name="cook_bbs_contents"></textarea>
+<button onclick="contentsWriteSubmit()">글쓰기</button>
 </form>
 
  <script type="text/javascript">
@@ -21,6 +22,12 @@
 
                 	
                 });
+                
+         
+                function contentsWriteSubmit() {
+					alert($('#cook_bbs_contents').val());
+                	
+				}
 
      </script>
 </body>
